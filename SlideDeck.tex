@@ -1,0 +1,256 @@
+
+
+\documentclass{beamer}
+ 
+\usepackage[utf8]{inputenc}
+ 
+ 
+%Information to be included in the title page:
+\title{Processing ddRAD for population history inference}
+\author{April Wright}
+\institute{ISU, KU}
+\date{Jan 6, 2016!}
+ 
+ 
+ 
+\begin{document}
+ 
+\frame{\titlepage}
+ 
+\begin{frame}
+\frametitle{ddRAD data}
+\begin{itemize}
+\item Reduced-representation genomic method
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{ddRAD data}
+\begin{itemize}
+\item Reduced-representation genomic method
+\item Cheap
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{ddRAD data}
+\begin{itemize}
+\item Reduced-representation genomic method
+\item Cheap
+\item Lots of data returned
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{ddRAD data}
+\begin{itemize}
+\item Reduced-representation genomic method
+\item Cheap
+\item Lots of data returned
+\end{itemize}
+\end{frame}
+ 
+\begin{frame}
+\frametitle{ddRAD data}
+\begin{itemize}
+\item Reduced-representation genomic method
+\item Cheap
+\item Lots of data returned
+\item Stable software pipelines for using these data
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{A Quick Note}
+Slides that contain ddRAD specific info will be noted. Some steps can be used with multiple data sources.
+\end{frame}
+
+\begin{frame}
+\frametitle{Our Study}
+Eurycea
+\end{frame}
+
+\begin{frame}
+\frametitle{Our Study}
+Eurycea
+Development
+\end{frame}
+
+\begin{frame}
+\frametitle{Our Study}
+Eurycea
+Development
+Prior work
+\end{frame}
+
+\begin{frame}
+\frametitle{Our Study}
+Eurycea
+Development
+Our work
+\end{frame}
+
+\begin{frame}
+\frametitle{Phylogenetics}
+\begin{itemize}
+\item Maximum likelihood
+\item Cheap
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Phylogenetics}
+\begin{itemize}
+\item Maximum likelihood
+\item Statistically consistent
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Phylogenetics}
+\begin{itemize}
+\item Maximum likelihood
+\item Statistically consistent
+\item Superimposed changes
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Phylogenetics}
+\begin{itemize}
+\item Maximum likelihood
+\item Statistically consistent
+\item Superimposed changes
+\item Model-based 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Phylogenetics}
+\item Problems
+\end{frame}
+
+\begin{frame}
+\frametitle{Phylogenetics}
+\begin{itemize}
+\item Problems
+\item Missing data
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Demultiplex}
+One of the things that makes RADseq, and especially ddRADseq so cheap is the pooling of samples
+\end{frame}
+
+\begin{frame}
+\frametitle{The Demultiplex}
+One of the things that makes RADseq, and especially ddRADseq so cheap is the pooling of samples
+The way we recover individual samples is via demultiplexing
+\end{frame}
+
+\begin{frame}
+\frametitle{The Demultiplex}
+ddRAD data include an inline barcode and an Illumina index. This allows multiple pools to be combined, and individuals to be separated back out computationally. 
+This allows for the cost-saving properties of batching, without the cost-increasing properties of synthesizing oligonucleotides.
+\end{frame}
+
+\begin{frame}
+\frametitle{The Demultiplex}
+We'll be using STACKS for this step
+\end{frame}
+
+\begin{frame}
+\frametitle{The Demultiplex}
+We'll be using STACKS for this step
+\end{frame}
+
+\begin{frame}
+\frametitle{The Demultiplex}
+We'll be using STACKS for this step
+\end{frame}
+
+\begin{frame}
+\frametitle{The Demultiplex}
+We'll be using STACKS for this step
+\end{frame}
+
+\begin{frame}
+\frametitle{The Demultiplex}
+Break: exercise
+\end{frame}
+
+\begin{frame}
+\frametitle{Building Individual Stacks}
+What is this?
+\end{frame}
+
+\begin{frame}
+\frametitle{Building Individual Stacks}
+Break: exercise
+\end{frame}
+
+\begin{frame}
+\frametitle{Building Individual Stacks}
+Break: exercise
+\end{frame}
+
+\begin{frame}
+\frametitle{Building a Catalog}
+Break: exercise
+\end{frame}
+
+\begin{frame}
+\frametitle{Building a Catalog}
+Break: exercise
+\end{frame}
+
+\begin{frame}
+\frametitle{Building a Catalog}
+Break: exercise
+\end{frame}
+
+\begin{frame}
+\frametitle{Mapping Individuals to the Catalog}
+Why?
+\end{frame}
+
+\begin{frame}
+\frametitle{Mapping Individuals to the Catalog}
+Why?
+\end{frame}
+
+\begin{frame}
+\frametitle{Mapping Individuals to the Catalog}
+Break
+\end{frame}
+
+\begin{frame}
+\frametitle{Output}
+How?
+\end{frame}
+
+\begin{frame}
+\frametitle{Output}
+How?
+\end{frame}
+
+\begin{frame}
+\frametitle{What do our missing data look like?}
+UNIX scripts to see how much per line
+\end{frame}
+
+\begin{frame}
+\frametitle{What do our missing data look like?}
+PAUP and pairs
+\end{frame}
+
+\begin{frame}
+\frametitle{What do our missing data look like?}
+Let's build a tree
+\end{frame}
+
+
+\end{document}
+
+
