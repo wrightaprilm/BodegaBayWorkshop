@@ -11,5 +11,5 @@ file_list = glob.glob(sys.argv[1])
 for file in file_list:
 	print(file)
 	data = dendropy.DnaCharacterMatrix.get(path=file, schema = sys.argv[2])	
-	new_file = file + 'phy'
+	new_file = file + '.phy'
 	data.write_to_path(new_file, sys.argv[3], force_unique_taxon_labels=False,spaces_to_underscores=True)
