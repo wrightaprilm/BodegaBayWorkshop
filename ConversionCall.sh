@@ -1,0 +1,1 @@
+converter.py './BodegaBayWorkshop/output/FinalMatrix*' 'nexus' 'phylip'
