@@ -1,1 +1,1 @@
-converter.py './BodegaBayWorkshop/output/FinalMatrix*' 'nexus' 'phylip'
+converter.py './output/FinalMatrix*' 'nexus' 'phylip'
