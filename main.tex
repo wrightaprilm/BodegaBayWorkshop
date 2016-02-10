@@ -169,6 +169,27 @@ And is there introgression between them?
 
 \begin{frame}
 \frametitle{Phylogenetics}
+\begin{figure}
+    \includegraphics[scale=0.5]{tranmat.png}
+    \end{figure}
+\end{frame} 
+
+\begin{frame}
+\frametitle{Phylogenetics}
+\begin{figure}
+    \includegraphics[scale=0.4]{no_obs.png}
+    \end{figure}
+\end{frame} 
+
+\begin{frame}
+\frametitle{Phylogenetics}
+\begin{figure}
+    \includegraphics[scale=0.4]{obs.png}
+    \end{figure}
+\end{frame} 
+
+\begin{frame}
+\frametitle{Phylogenetics}
 \begin{itemize}
 \item \textbf{Maximum likelihood} is a framework for estimating phylogeny by modeling the process of evolution that generated our sequence data
 \item Model-based: We make mathematically explicit assumptions 
@@ -259,7 +280,6 @@ And is there introgression between them?
 \end{frame}
 
 
-
 \begin{frame}
 \frametitle{Phylogenetics}
 \begin{itemize}
@@ -331,12 +351,7 @@ The STACKS step for this is called \href{http://catchenlab.life.illinois.edu/sta
 
 \begin{frame}
 \frametitle{The Demultiplex}
-Let's look at the output
-\end{frame}
-
-\begin{frame}
-\frametitle{The Demultiplex}
-Let's look at the output
+\textbf{Output}
 \begin{itemize}
 \item FASTQ files
 \end{itemize}
@@ -380,7 +395,7 @@ This allows us to sort tags into "stacks" of identical and unique reads
 \begin{frame}
 \frametitle{Initial Identification of SNPs}
 Each RAD tag has usually been sequenced multiply per-individual \\
-This allows us to sort tags into "stacks" of identical and unique reads
+This allows us to sort tags into "stacks" of identical and unique reads \\
 From these sets of identical and unique reads, we do a first pass at identifying SNPs.
 \end{frame}
 
@@ -388,7 +403,7 @@ From these sets of identical and unique reads, we do a first pass at identifying
 \frametitle{Initial Identification of SNPs}
 \textbf{Key Parameters}
 \begin{itemize}
-\item -m: Minimum depth of coverage
+\item -m: Minimum stack depth
 \item -M: Maximum mismatches allowed between reads in a stack
 \end{itemize}
 \end{frame}
@@ -399,11 +414,6 @@ From these sets of identical and unique reads, we do a first pass at identifying
 \begin{itemize}
 \item -i: ID for this sample
 \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Exercise}
-I've included a script, countSNPs.sh, and another, plotPutativeSNPs.py
 \end{frame}
 
 \begin{frame}
@@ -420,38 +430,7 @@ Once we have our within-individual stacks, we build a catalog of loci across ind
 \frametitle{Catalog Building}
 \textbf{Key Parameters}
 \begin{itemize}
-\item -m: Maintain tags that match more than one RAD tag
 \item -n: number of mismatches to allow between a putative tag, and a tag in the catalog
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Catalog Building}
-\textbf{Exercise}
-\begin{itemize}
-\item cstacks.sh
-\item Choose a different value for -n
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Catalog Building}
-\textbf{Exercise}
-\begin{itemize}
-\item How many lines (SNPs) are in this catalog?
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Check Individuals Against Catalog}
-We use \href{http://catchenlab.life.illinois.edu/stacks/comp/sstacks.php}{sstacks} for this
-\end{frame}
-\begin{frame}
-\frametitle{Catalog Building}
-\textbf{Exercise}
-\begin{itemize}
-\item Run sstacks
-\item Use countMatches.sh and plotMatches.py to see how many SNPs for each individual match the catalog
 \end{itemize}
 \end{frame}
 
@@ -506,6 +485,17 @@ RAxML Approximate final L scores
 \begin{frame}
 \frametitle{Lastly, let's build the tree}
 Garli
+\end{frame}
+\begin{frame}
+\frametitle{Lastly, let's build the tree}
+Garli
+\begin{tabular}{ l  | r }
+  323320 & -287898.7874  \\
+  323340 & -84289.0263 \\
+  323360 & -27384.6012\\
+  323380 & -10273.63021\\
+  323390 & -1697.6284\\
+\end{tabular}
 \end{frame}
 
 \end{document}
