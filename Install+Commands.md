@@ -4,7 +4,7 @@ Python:
 ```UNIX
 wget https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda2-2.5.0-Linux-x86_64.sh
 bash Anaconda2-2.5.0-Linux-x86_64.sh
-sudo easy_install -U setuptools
+sudo apt-get install python-pip
 ```
 Say yes to everything it asks.
 
@@ -42,11 +42,8 @@ gunzip paup4a147_ubuntu64.gz
 chmod +x paup4a147_ubuntu64
 ```
 
-Phylogeny-viewing stuff:
-```UNIX
-sudo apt-get install -y default-jre unzip
-git clone https://github.com/rambaut/figtree.git
-```UNIX
+Phylogeny-viewing stuff: On your personal machine, download [FigTree](http://tree.bio.ed.ac.uk/software/figtree/)
+
 
 Lastly, tutorial materials:
 ```UNIX
@@ -90,7 +87,7 @@ Try this on several of the data sets.
 Now we're going to convert our matrices for use with RAxML:
 
 ```UNIX
-./ConversionCall.sh
+ConversionCall.sh
 ```
 
 What this does is converts from the more complex Nexus file to a more lightweight Phylip file. You can have a look at the new file if you want. Example:
@@ -103,11 +100,11 @@ Building a phylogeny:
 Choose _one_
 ```UNIX
 
-raxmlHPC-PTHREADS -m GTRGAMMA -p 5655 -n sb323320 -T 8 -s ./BodegaBayWorkshop/output/FinalMatrix323320.nex.phy 
-raxmlHPC-PTHREADS -m GTRGAMMA -p 5655 -n sb323340 -T 8 -s ./BodegaBayWorkshop/output/FinalMatrix323340.nex.phy 
-raxmlHPC-PTHREADS -m GTRGAMMA -p 5655 -n sb323360 -T 8 -s ./BodegaBayWorkshop/output/FinalMatrix323360.nex.phy 
-raxmlHPC-PTHREADS -m GTRGAMMA -p 5655 -n sb323380 -T 8 -s ./BodegaBayWorkshop/output/FinalMatrix323380.nex.phy 
-raxmlHPC-PTHREADS -m GTRGAMMA -p 5655 -n sb323390 -T 8 -s ./BodegaBayWorkshop/output/FinalMatrix323390.nex.phy 
+raxmlHPC-PTHREADS -m GTRCAT -V  -p 5655 -n sb323320 -T 8 -s ./BodegaBayWorkshop/output/FinalMatrix323320.nex.phy 
+raxmlHPC-PTHREADS -m GTRCAT -V  -p 5655 -n sb323340 -T 8 -s ./BodegaBayWorkshop/output/FinalMatrix323340.nex.phy 
+raxmlHPC-PTHREADS -m GTRCAT -V  -p 5655 -n sb323360 -T 8 -s ./BodegaBayWorkshop/output/FinalMatrix323360.nex.phy 
+raxmlHPC-PTHREADS -m GTRCAT -V  -p 5655 -n sb323380 -T 8 -s ./BodegaBayWorkshop/output/FinalMatrix323380.nex.phy 
+raxmlHPC-PTHREADS -m GTRCAT -V -p 5655 -n sb323390 -T 8 -s ./BodegaBayWorkshop/output/FinalMatrix323390.nex.phy 
 ```
 
 
@@ -115,4 +112,17 @@ Building a phylogeny, Mark II:
 
 Choose _one_. 
 
+Open ./BodegaBayWorkshop/garli.conf and edit this line:
 
+```UNIX
+datafname = ./output/MatrixGoesHere.nex
+```
+
+with the nexus file you'd like to run. Then type:
+
+```UNIX
+cd BodegaBayWorkshop
+garli
+```
+
+to run.
