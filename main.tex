@@ -86,16 +86,17 @@ Slides that contain ddRAD specific info will be noted. Some steps can be used wi
 % Your image included here
 \begin{figure}
     \includegraphics[scale=0.15]{pr_2010-06_map_hi-res.jpg}
-    \caption{Image: AGU}
     \end{figure}
+
     \end{block}
+\centerline{Image: AGU}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Our Study}
 \begin{figure}
     \includegraphics[scale=0.65]{Long-shot-of-Austin-blind-salamander.jpg}
-	\caption{Arkive}
     \end{figure}
 \end{frame}
 
@@ -136,9 +137,10 @@ And is there introgression between them?
 \begin{frame}
 \frametitle{Phylogenetics}
 \begin{figure}
-    \includegraphics[scale=0.25]{F2_large.jpg}
-	\caption{JP Staley, 2006. Figure 2}
+    \includegraphics[scale=0.2]{F2_large.jpg}
     \end{figure}
+\centerline{JP Staley, 2006. Figure 2}
+
 \end{frame}
 
 
@@ -205,6 +207,7 @@ And is there introgression between them?
 \item Statistically consistent: When we use the true model to analyze our data, we will eventually converge to the true answer as more data is added
 \end{itemize}
 \end{frame}
+
 \begin{frame}
 \frametitle{Phylogenetics}
 \begin{itemize}
@@ -378,7 +381,7 @@ Let's look at the output
 
 \begin{frame}
 \frametitle{Initial Identification of SNPs}
-For this step, we will use \href{http://catchenlab.life.illinois.edu/stacks/comp/ustacks.php}{ustacks}
+The STACKS step for this is called \href{http://catchenlab.life.illinois.edu/stacks/comp/ustacks.php}{ustacks}
 \end{frame}
 
 \begin{frame}
@@ -436,7 +439,7 @@ Once we have our within-individual stacks, we build a catalog of loci across ind
 
 \begin{frame}
 \frametitle{Outputting Data for Phylogenetics}
-We use \href{http://catchenlab.life.illinois.edu/stacks/comp/populations.php}{populations} for this. 
+The STACKS step for this is called \href{http://catchenlab.life.illinois.edu/stacks/comp/populations.php}{populations} 
 \end{frame}
 
 \begin{frame}
@@ -455,25 +458,30 @@ A new file is needed, here: \textbf{the population map}
 
 \begin{frame}
 \frametitle{Exercise}
-Looking at this output is easy.
+Let's look at this output
 \end{frame}
 
 \begin{frame}
 \frametitle{Exercise}
-Looking at this output is easy.
+Let's look at this output \\
 But we can also look in a more complex way: countPhyloMissing.sh and plotPhyloMissing.py
 \end{frame}
 
 \begin{frame}
 \frametitle{RAxML approximate likelihoods}
-
+\begin{center}
 \begin{tabular}{ l  | r }
+  \multicolumn{2}{c}{RAxML} \\
+\hline
+    Dataset & L score  \\
+\hline
   323320 & -288336.664115  \\
   323340 & -84377.460743 \\
   323360 & -27407.770692\\
   323380 & -10281.525371\\
   323390 & -1699.210794 \\
 \end{tabular}
+\end{center}
 \end{frame}
 
 \begin{frame}
@@ -486,16 +494,65 @@ RAxML Approximate final L scores
 \frametitle{Lastly, let's build the tree}
 Garli
 \end{frame}
+
 \begin{frame}
 \frametitle{Lastly, let's build the tree}
-Garli
+\begin{center}
 \begin{tabular}{ l  | r }
+  \multicolumn{2}{c}{Garli} \\
+\hline
+    Dataset & L score  \\
+\hline
   323320 & -287898.7874  \\
   323340 & -84289.0263 \\
   323360 & -27384.6012\\
   323380 & -10273.63021\\
   323390 & -1697.6284\\
 \end{tabular}
+\end{center}
 \end{frame}
+
+\begin{frame}
+\frametitle{Why}
+\begin{figure}
+    \includegraphics[scale=0.35]{muchotrees}
+    \end{figure}
+\centerline{Image stolen, shamelessly, from Derrick Zwickl}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Why}
+\begin{figure}
+    \includegraphics[scale=0.35]{valleyodeath}
+    \end{figure}
+\centerline{Image stolen, shamelessly, from Derrick Zwickl}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Lastly, let's build the tree}
+Garli can take an input tree and optimize phylogenetic parameter estimates. \\
+We actually had fantastic results doing this in a large scale phylogenetics paper (\href{http://onlinelibrary.wiley.com/doi/10.1002/jez.b.22642/full}{Wright et al. 2015})
+\end{frame}
+
+\begin{frame}
+\frametitle{Lastly, let's build the tree}
+\begin{center}
+\begin{tabular}{ l  | r }
+  \multicolumn{2}{c}{Second-round optimization} \\
+\hline
+    Dataset & L score  \\
+\hline
+  323320 & -287897.3609  \\
+  323340 & -84281.7290 \\
+  323360 & -27384.6012\\
+  323380 & -10273.6302\\
+  323390 & -1697.6283\\
+\end{tabular}
+\end{center}
+\end{frame}
+
 
 \end{document}
