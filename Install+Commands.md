@@ -123,6 +123,7 @@ raxmlHPC-PTHREADS -m GTRCAT -V  -p 5655 -n sb323380 -T 8 -s ./output/FinalMatrix
 raxmlHPC-PTHREADS -m GTRCAT -V -p 5655 -n sb323390 -T 8 -s ./output/FinalMatrix323390.nex.phy 
 ```
 
+The output tree will be in a file called ``RAxML_bestTree.*`` which you can view with FigTree by copying it over to the desktop/laptop machine.
 
 Building a phylogeny, Mark II:
 
